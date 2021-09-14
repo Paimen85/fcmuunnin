@@ -4,19 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="js1.js" defer></script>
+    <script src="js1.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>
-        °F - °C muunnin
-    </h1>
-    <form action="">
-        <label>Fahrenheit</label>
-        <input type="number" name="muunnin">
-        <button type="button">Muunna</button>
-    </form>
-    <p>
-        <span id="fahrenheit">?</span> °F= <span id="celsius">?</span> °C
-    </p>
+    <div class="wrapper">
+        <h1 class="otsikko1">
+            Asteiden muunnin
+        </h1>
+        <form action="#">
+            <div class="arvo">
+                <p>Arvo</p>
+                <input class="number__arvo" type="number" name="muunnin" value="1">
+            </div>  
+            <div class="mita__muunnetaan">
+                <p>Valitse yksikko</p>
+                <select class="yksikko__1" name="yksikko__1">
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="celsius">Celsius</option>
+                </select>
+            </div>
+            <div class="yksikoksi">
+                <p>Valitse yksikko</p>
+                <select class="yksikko__2" name="yksikko__2">
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="celsius">Celsius</option>
+                </select>
+            </div>
+            <div class="tarkkuus">
+                <p>Tarkkuus</p>
+                <select class="tarkkuus__select" name="tarkkuus">
+                    <option value="0__desimaalia">0 desimaalia</option>
+                    <option value="1__desimaalia">1 desimaalia</option>
+                    <option value="2__desimaalia">2 desimaalia</option>
+                </select>
+            </div>
+            <div class="nayta__kaava">
+                <label >
+                    <input class="kaava" type="checkbox" name="nayta__kaava">Näytä kaava
+                </label>
+                <p class="text"></p>
+            </div>
+        </form>
+        <p class="tulos">
+            <span id="eka__luku">?</span> = <span id="toka__luku">?</span> 
+        </p>
+        <button class="button" type="button">Muunna</button>
+    </div>
 </body>
 </html>
